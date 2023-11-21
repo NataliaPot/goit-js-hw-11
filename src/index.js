@@ -28,7 +28,7 @@ async function onSearch(event) {
   searchQuery = event.currentTarget.searchQuery.value.trim();
 
   if (!searchQuery) {
-    Notiflix.Notify.failure('Please enter your search query');
+    Notiflix.Notify.failure('Please, enter your search query');
     loadMoreBtn.classList.add('hidden');
     return;
   }
