@@ -24,7 +24,7 @@ let lightbox = new SimpleLightbox('.gallery a', {
 
 async function onSearch(event) {
   event.preventDefault();
-  galleryEl.innerHTML = '';
+
   searchQuery = event.currentTarget.searchQuery.value.trim();
 
   if (!searchQuery) {
@@ -32,7 +32,7 @@ async function onSearch(event) {
     loadMoreBtn.classList.add('hidden');
     return;
   }
-
+  galleryEl.innerHTML = '';
   page = 1;
   loadMoreBtn.classList.add('hidden');
   isFirstSearch = true;
